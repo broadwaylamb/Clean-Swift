@@ -8,14 +8,22 @@
 
 import Foundation
 
-struct ___FILEBASENAMEASIDENTIFIER___Request {
-    <#struct properties#>
-}
+// MARK: Scene
+struct ___FILEBASENAMEASIDENTIFIER___ {
 
-struct ___FILEBASENAMEASIDENTIFIER___Response {
-    <#struct properties#>
-}
+    // MARK: Use Case
+    struct <#UseCase#> {
 
-struct ___FILEBASENAMEASIDENTIFIER___ViewModel {
-    <#struct properties#>
+        struct Request {
+
+        }
+
+        struct Response {
+
+        }
+
+        struct ViewModel {
+
+        }
+    }
 }
