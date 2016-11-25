@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
@@ -26,22 +26,11 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UITableViewController, ___FI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        <#doSomethingOnLoad#>()
-    }
-
-    func <#doSomethingOnLoad#>() {
-
-        // NOTE: Ask the Interactor to do some work
-
     }
 
     // MARK: - Display logic
 
-    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel) {
-        // NOTE: Display the result from the Presenter
 
-        // nameTextField.text = viewModel.name
-    }
 }
 
 extension ___FILEBASENAMEASIDENTIFIER___ViewController {

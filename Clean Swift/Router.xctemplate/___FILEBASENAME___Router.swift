@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___Router
 
     // MARK: - Navigation
 
-    func <#navigateToSomewhere#>() {
+    func navigateToSomewhere() {
         // NOTE: Teach the router how to navigate to another scene. Some examples follow:
 
         // 1. Trigger a storyboard segue
@@ -41,12 +41,12 @@ class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___Router
     func passDataToNextScene(segue: UIStoryboardSegue) {
         // NOTE: Teach the router which scenes it can communicate with
 
-        if segue.identifier == <#identifier#> {
-            <#passDataToSomewhereScene#>(segue)
+        if segue.identifier == "identifier" {
+            passDataToSomewhereScene(segue)
         }
     }
 
-    func <#passDataToSomewhereScene#>(segue: UIStoryboardSegue) {
+    func passDataToSomewhereScene(segue: UIStoryboardSegue) {
         // NOTE: Teach the router how to pass data to the next scene
 
         // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
