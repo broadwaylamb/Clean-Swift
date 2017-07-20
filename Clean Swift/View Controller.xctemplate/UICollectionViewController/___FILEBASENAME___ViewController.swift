@@ -3,39 +3,65 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
-
+protocol ___VARIABLE_sceneName___DisplayLogic : class {
+    // func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput {
+final class ___VARIABLE_sceneName___ViewController : UICollectionViewController,
+                                                     ___VARIABLE_sceneName___DisplayLogic {
 
-}
+    var interactor: ___VARIABLE_sceneName___BusinessLogic?
+    var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
+    // MARK: Lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-    var output: ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput!
-    var router: ___FILEBASENAMEASIDENTIFIER___Router!
+        _setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
 
-    // MARK: - View Controller lifecycle
+        _setup()
+    }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
 
     }
-
-    // MARK: - Display logic
-
-
-}
-
-extension ___FILEBASENAMEASIDENTIFIER___ViewController {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        ___FILEBASENAMEASIDENTIFIER___Configurator.configure(self)
+  
+    // MARK: Setup
+  
+    private func _setup() {
+        let interactor = ___VARIABLE_sceneName___Interactor()
+        let presenter = ___VARIABLE_sceneName___Presenter()
+        let router = ___VARIABLE_sceneName___Router()
+        self.interactor = interactor
+        self.router = router
+        interactor.presenter = presenter
+        presenter.viewController = self
+        router.viewController = self
+        router.dataStore = interactor
     }
+  
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        // router?.routeToSomewhere(segue: segue)
+    }
+    
+    // MARK: Display logic
+            
+    // func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
+    //
+    // }
 }

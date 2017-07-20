@@ -3,16 +3,16 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-// MARK: Scene
-struct ___FILEBASENAMEASIDENTIFIER___ {
+enum ___VARIABLE_sceneName___ {
 
-    // MARK: Use Case
-    struct UseCase {
+    // MARK: Use cases
+  
+    enum Something {
 
         struct Request {
 
@@ -23,7 +23,7 @@ struct ___FILEBASENAMEASIDENTIFIER___ {
         }
 
         struct ViewModel {
-
+      
         }
     }
 }

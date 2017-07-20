@@ -3,53 +3,53 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___RouterInput {
-
+protocol ___VARIABLE_sceneName___RoutingLogic  {
+    // func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput {
+protocol ___VARIABLE_sceneName___DataPassing {
+    var dataStore: ___VARIABLE_sceneName___DataStore? { get }
+}
 
-    weak var viewController: ___FILEBASENAMEASIDENTIFIER___ViewController!
+fianl class ___VARIABLE_sceneName___Router : ___VARIABLE_sceneName___RoutingLogic,
+                                             ___VARIABLE_sceneName___DataPassing {
 
-    // MARK: - Navigation
+    weak var viewController: ___VARIABLE_sceneName___ViewController?
+    var dataStore: ___VARIABLE_sceneName___DataStore?
+  
+    // MARK: Routing
+  
+    // func routeToSomewhere(segue: UIStoryboardSegue?) {
 
-    func navigateToSomewhere() {
-        // NOTE: Teach the router how to navigate to another scene. Some examples follow:
+    //    if let segue = segue {
+    //        let destinationVC = segue.destination as! SomewhereViewController
+    //        var destinationDS = destinationVC.router!.dataStore!
+    //        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+    //    } else {
+    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //        let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
+    //        var destinationDS = destinationVC.router!.dataStore!
+    //        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+    //        navigateToSomewhere(source: viewController!, destination: destinationVC)
+    //    }
+    // }
 
-        // 1. Trigger a storyboard segue
-        // viewController.performSegueWithIdentifier("ShowSomewhereScene", sender: nil)
-
-        // 2. Present another view controller programmatically
-        // viewController.presentViewController(someWhereViewController, animated: true, completion: nil)
-
-        // 3. Ask the navigation controller to push another view controller onto the stack
-        // viewController.navigationController?.pushViewController(someWhereViewController, animated: true)
-
-        // 4. Present a view controller from a different storyboard
-        // let storyboard = UIStoryboard(name: "OtherThanMain", bundle: nil)
-        // let someWhereViewController = storyboard.instantiateInitialViewController() as! SomeWhereViewController
-        // viewController.navigationController?.pushViewController(someWhereViewController, animated: true)
-    }
-
-    // MARK: - Communication
-
-    func passDataToNextScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router which scenes it can communicate with
-
-        if segue.identifier == "identifier" {
-            passDataToSomewhereScene(segue)
-        }
-    }
-
-    func passDataToSomewhereScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router how to pass data to the next scene
-
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereViewController.output.name = viewController.output.name
-    }
+    // MARK: Navigation
+    
+    // func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController,
+    //                          destination: SomewhereViewController) {
+    //    source.show(destination, sender: nil)
+    // }
+    
+    // MARK: Passing data
+    
+    // func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore,
+    //                          destination: inout SomewhereDataStore) {
+    //    destination.name = source.name
+    // }
 }

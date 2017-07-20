@@ -3,31 +3,32 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import XCTest
 @testable import ___PROJECTNAME___
+import XCTest
 
-class ___FILEBASENAMEASIDENTIFIER___WorkerTests: XCTestCase {
+final class ___VARIABLE_sceneName___WorkerTests : XCTestCase {
 
     // MARK: Subject under test
-    var sut: ___FILEBASENAMEASIDENTIFIER___Worker!
-
-    // MARK: - Test lifecycle
+    
+    var sut: ___VARIABLE_sceneName___Worker!
+    
+    // MARK: Test lifecycle
+    
     override func setUp() {
         super.setUp()
 
-        sut = ___FILEBASENAMEASIDENTIFIER___Worker()
     }
-
+    
     override func tearDown() {
 
         super.tearDown()
     }
-
-    // MARK: - Test doubles
-
-    // MARK: - Tests
+    
+    // MARK: Test doubles
+    
+    // MARK: Tests
 
 }
