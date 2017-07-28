@@ -8,24 +8,24 @@
 
 import UIKit
 
-protocol ___VARIABLE_sceneName___DisplayLogic : class {
+protocol ___VARIABLE_sceneName___DisplayLogic: class {
     // func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-final class ___VARIABLE_sceneName___ViewController : UICollectionViewController,
-                                                     ___VARIABLE_sceneName___DisplayLogic {
+final class ___VARIABLE_sceneName___ViewController: UICollectionViewController,
+                                                    ___VARIABLE_sceneName___DisplayLogic {
 
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
     var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
-    // MARK: Lifecycle
-    
+    // MARK: - Lifecycle
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
         _setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -33,12 +33,12 @@ final class ___VARIABLE_sceneName___ViewController : UICollectionViewController,
     }
 
     override func viewDidLoad() {
-      super.viewDidLoad()
+        super.viewDidLoad()
 
     }
-  
-    // MARK: Setup
-  
+
+    // MARK: - Setup
+
     private func _setup() {
         let interactor = ___VARIABLE_sceneName___Interactor()
         let presenter = ___VARIABLE_sceneName___Presenter()
@@ -50,17 +50,17 @@ final class ___VARIABLE_sceneName___ViewController : UICollectionViewController,
         router.viewController = self
         router.dataStore = interactor
     }
-  
-    // MARK: Routing
-    
+
+    // MARK: - Routing
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
         // router?.routeToSomewhere(segue: segue)
     }
-    
-    // MARK: Display logic
-            
+
+    // MARK: - Display logic
+
     // func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
     //
     // }

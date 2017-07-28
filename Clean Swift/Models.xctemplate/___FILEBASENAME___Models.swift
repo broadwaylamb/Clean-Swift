@@ -11,7 +11,7 @@ import UIKit
 enum ___VARIABLE_sceneName___ {
 
     // MARK: Use cases
-  
+
     enum Something {
 
         struct Request {
@@ -23,7 +23,7 @@ enum ___VARIABLE_sceneName___ {
         }
 
         struct ViewModel {
-      
+
         }
     }
 }

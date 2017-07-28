@@ -9,26 +9,27 @@
 @testable import ___PROJECTNAME___
 import XCTest
 
-final class ___VARIABLE_sceneName___WorkerTests : XCTestCase {
+final class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
 
     // MARK: Subject under test
-    
+
     var sut: ___VARIABLE_sceneName___Worker!
-    
+
     // MARK: Test lifecycle
-    
+
     override func setUp() {
         super.setUp()
 
+        sut = ___VARIABLE_sceneName___Worker()
     }
-    
+
     override func tearDown() {
 
         super.tearDown()
     }
-    
+
     // MARK: Test doubles
-    
+
     // MARK: Tests
 
 }

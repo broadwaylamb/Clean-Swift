@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ___VARIABLE_sceneName___RoutingLogic  {
+protocol ___VARIABLE_sceneName___RoutingLogic {
     // func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
@@ -16,14 +16,14 @@ protocol ___VARIABLE_sceneName___DataPassing {
     var dataStore: ___VARIABLE_sceneName___DataStore? { get }
 }
 
-fianl class ___VARIABLE_sceneName___Router : ___VARIABLE_sceneName___RoutingLogic,
-                                             ___VARIABLE_sceneName___DataPassing {
+final class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic,
+                                            ___VARIABLE_sceneName___DataPassing {
 
     weak var viewController: ___VARIABLE_sceneName___ViewController?
     var dataStore: ___VARIABLE_sceneName___DataStore?
-  
-    // MARK: Routing
-  
+
+    // MARK: - Routing
+
     // func routeToSomewhere(segue: UIStoryboardSegue?) {
 
     //    if let segue = segue {
@@ -39,15 +39,15 @@ fianl class ___VARIABLE_sceneName___Router : ___VARIABLE_sceneName___RoutingLogi
     //    }
     // }
 
-    // MARK: Navigation
-    
+    // MARK: - Navigation
+
     // func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController,
     //                          destination: SomewhereViewController) {
     //    source.show(destination, sender: nil)
     // }
-    
-    // MARK: Passing data
-    
+
+    // MARK: - Passing data
+
     // func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore,
     //                          destination: inout SomewhereDataStore) {
     //    destination.name = source.name
