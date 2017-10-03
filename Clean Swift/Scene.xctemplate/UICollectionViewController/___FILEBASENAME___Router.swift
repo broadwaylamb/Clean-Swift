@@ -9,7 +9,10 @@
 import UIKit
 
 protocol ___VARIABLE_sceneName___RoutingLogic {
-    // func routeToSomewhere(segue: UIStoryboardSegue?)
+
+    // func routeToNextScene()
+
+    // func prepareForNextScene(segue: UIStoryboardSegue)
 }
 
 protocol ___VARIABLE_sceneName___DataPassing {
@@ -24,32 +27,28 @@ final class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic
 
     // MARK: - Routing
 
-    // func routeToSomewhere(segue: UIStoryboardSegue?) {
-
-    //    if let segue = segue {
-    //        let destinationVC = segue.destination as! SomewhereViewController
-    //        var destinationDS = destinationVC.router!.dataStore!
-    //        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    } else {
-    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //        let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //        var destinationDS = destinationVC.router!.dataStore!
-    //        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //        navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //    }
+    // func routeToNextScene() {
+    //     viewController?.performSegue(withIdentifier: "SomeSegueIdentifier", sender: nil)
     // }
 
-    // MARK: - Navigation
+    // func prepareForNextScene(segue: UIStoryboardSegue) {
 
-    // func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController,
-    //                          destination: SomewhereViewController) {
-    //    source.show(destination, sender: nil)
+    //     switch segue.identifier {
+    //     case "SomeSegueIdentifier"?:
+    //         guard let destination = segue.destination as? SomewhereViewController,
+    //                 let sourceDataStore = dataStore,
+    //                 var destinationDataStore = destination.router?.dataStore else { break }
+    
+    //             _passDataToAuthWaySMSCode(source: sourceDataStore, destination: &destinationDataStore)
+    //     default:
+    //         break
+    //     }
     // }
 
     // MARK: - Passing data
 
-    // func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore,
-    //                          destination: inout SomewhereDataStore) {
+    // private func _passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore,
+    //                                   destination: inout SomewhereDataStore) {
     //    destination.name = source.name
     // }
 }

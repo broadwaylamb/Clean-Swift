@@ -56,7 +56,7 @@ final class ___VARIABLE_sceneName___ViewController: UITableViewController,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
-        // router?.routeToSomewhere(segue: segue)
+        // router?.prepareForNextScene(segue: segue)
     }
 
     // MARK: - Display logic
